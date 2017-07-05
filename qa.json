@@ -1,7 +1,7 @@
 [
   {
     "ParameterKey": "ImageID",
-    "ParameterValue": "ami-18f8df7d"
+    "ParameterValue": "ami-b55a51cc"
   }, 
   {
     "ParameterKey": "InstanceType",
@@ -9,14 +9,14 @@
   },
    {
     "ParameterKey": "KeyName",
-    "ParameterValue": "centos2"
+    "ParameterValue": "CIKeyPair"
    },
   {
      "ParameterKey": "SubnetId",
-    "ParameterValue": "subnet-88c849f3"
+    "ParameterValue": "subnet-f142e9aa"
   },
   {
     "ParameterKey": "InstanceSecurityGroup",
-    "ParameterValue": "sg-626d620b"
+    "ParameterValue": "sg-de1fdda4"
   }
 ]
