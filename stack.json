@@ -3,6 +3,9 @@
 
 	"Description": "AWS CloudFormation Sample Template vpc_single_instance_in_subnet.template: Sample template showing how to create a VPC and add an EC2 instance with an Elastic IP address and a security group. **WARNING** This template creates an Amazon EC2 instance. You will be billed for the AWS resources used if you create a stack from this template.",
 
+	"variables":{
+		"version_number":"2.0"		
+	},
 	"Parameters": {
 
 		"InstanceType": {
@@ -76,7 +79,7 @@
 							"sudo chmod 400 susheel068.pem\n",
 							"sudo chef-client -o recipe[test::docs_example]\n",
 							"cd /opt/tomcat_docs/webapps\n",
-							"sudo wget http://34.209.64.226:8080/nexus-2.14.4-03/service/local/repositories/releases/content/org/sonatype/mavenbook/simple_webapp/${version}/simple_webapp-${version}.war\n",
+							"sudo wget http://34.209.64.226:8080/nexus-2.14.4-03/service/local/repositories/releases/content/org/sonatype/mavenbook/simple_webapp/{{version_number}}/simple_webapp-{{version_number}}.war\n",
 							"sudo service tomcat_docs restart\n",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
